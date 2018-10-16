@@ -2,6 +2,8 @@
 
 Mail Notification Channel for [adonis-notifications](https://github.com/enniel/adonis-notifications).
 
+[![Build Status](https://travis-ci.org/enniel/adonis-mail-notification-channel.svg?branch=master)](https://travis-ci.org/enniel/adonis-mail-notification-channel)
+
 ## Installation
 
 1. Add package:
