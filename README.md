@@ -19,7 +19,7 @@ $ yarn add adonis-mail-notification-channel
 
 See [mail doc](https://adonisjs.com/docs/4.1/mail) for more information
 
-2. Register provider inside the your `start/app.js` file.
+3. Register provider inside the your `start/app.js` file.
 
 ```js
 const providers = [
