@@ -15,8 +15,11 @@ test.group('MailNotificationChannelProvider', group => {
       return config
     })
 
+    ioc.singleton('Adonis/Src/View', () => null)
+
     await registrar
       .providers([
+        '@adonisjs/mail/providers/MailProvider',
         'adonis-notifications/providers/NotificationsProvider',
         path.join(__dirname, '../../providers/MailNotificationChannelProvider')
       ])
