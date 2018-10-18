@@ -9,7 +9,7 @@ class MailChannel {
   }
 
   async send (notifiable, notification) {
-    const message = this.getMessage(notifiable, notification)
+    const message = await this.getMessage(notifiable, notification)
     let to = await notifiable.routeNotificationFor('mail')
     if (typeof to === 'string') {
       message.to(to)
