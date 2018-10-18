@@ -78,6 +78,20 @@ class MyNotification {
 
   toMail () {
     const message = new MailMessage()
+    // You can set up configuration in message
+    message
+      .configure({
+        connection: 'smtp',
+        smtp: {
+          driver: 'smtp',
+          host: process.env.SMTP_HOST,
+          port: process.env.SMTP_PORT,
+          auth: {
+            user: process.env.MAIL_USERNAME,
+            pass: process.env.MAIL_PASSWORD
+          }
+        }
+      })
     message
       .text(this.text)
       .subject('Message Notification Channel Test')
