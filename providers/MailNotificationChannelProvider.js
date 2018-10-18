@@ -9,8 +9,11 @@ class MailNotificationChannelProvider extends ServiceProvider {
     })
     this.app.alias('Adonis/Notifications/MailMessage', 'MailMessage')
     this.app.singleton('Adonis/Notifications/MailSender', app => {
+      const View = app.use('Adonis/Src/View')
+      const Config = app.use('Adonis/Src/Config')
+
       const MailSender = require('../src/MailSender')
-      return new MailSender(app.use('Adonis/Addons/Mail'))
+      return new MailSender(Config, View)
     })
     this.app.alias('Adonis/Notifications/MailSender', 'MailSender')
   }

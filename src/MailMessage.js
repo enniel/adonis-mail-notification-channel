@@ -18,6 +18,20 @@ class MailMessage extends Message {
     this.mailerMessage.data = data
     return this
   }
+
+  /**
+   * Set configuration
+   *
+   * @method configure
+   * @param  {Object} config
+   *
+   * @chainable
+   */
+  configure (config) {
+    this.config = config
+
+    return this
+  }
 }
 
 module.exports = MailMessage
